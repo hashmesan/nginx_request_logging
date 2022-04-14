@@ -1,5 +1,7 @@
 ## NGINX Config for detail request body logging
 
+This is a detail request body logging which is useful for getting RPC request body.
+
 ### Add new Logging format
 
 Add this to http block
