@@ -1,0 +1,15 @@
+processors:
+  - drop_event:
+      when:
+        regexp:
+          message: "eth_blockNumber|eth_chainId|eth_getBlockByNumber"
+
+filebeat.inputs:
+- type: log
+  paths:
+    - "/var/log/nginx/test.detail.log"
+
+output.logstash:
+  hosts: ["logstash:5000"]
+
+logging.level: debug
